@@ -101,11 +101,11 @@ services:
                 else
                 {
                     sw.Write(@"
-      - ../mssql/data:/var/opt/mssql/data");
+      - mssql-data:/var/opt/mssql/data");
                 }
 
                 sw.Write($@"
-      - ../mssql/backups:/etc/bitwarden/mssql/backups
+      - mssql-backups:/etc/bitwarden/mssql/backups
     env_file:
       - mssql.env
       - ../env/mssql.override.env
